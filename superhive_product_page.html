@@ -1,0 +1,121 @@
+<div style="background:#0b0f14;color:#e8edf3;border:1px solid #243241;border-radius:8px;overflow:hidden;font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.65;">
+  <div style="padding:34px 28px 28px;background:linear-gradient(135deg,#0b0f14 0%,#132231 54%,#0f2b2d 100%);border-bottom:1px solid #263746;">
+    <p style="margin:0 0 10px;color:#70e1d0;font-size:13px;font-weight:700;letter-spacing:0;text-transform:uppercase;">Blender add-on for curve rigging</p>
+    <h1 style="margin:0;color:#ffffff;font-size:34px;line-height:1.12;font-weight:800;letter-spacing:0;">Armacurve</h1>
+    <p style="margin:12px 0 0;color:#c8d3df;font-size:18px;max-width:820px;">Turn Bezier curve objects into controllable armatures, mesh rigs, helper-driven setups, and optional cloth-based motion without rebuilding the rig by hand.</p>
+    <div style="margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;">
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:12px 14px;">
+        <strong style="display:block;color:#ffffff;font-size:15px;">Convert curves to bones</strong>
+        <span style="display:block;color:#aebdcc;font-size:13px;">Generate an armature from a selected curve.</span>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:12px 14px;">
+        <strong style="display:block;color:#ffffff;font-size:15px;">Rig mesh from curve</strong>
+        <span style="display:block;color:#aebdcc;font-size:13px;">Create a mesh rig workflow for curve shapes.</span>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:12px 14px;">
+        <strong style="display:block;color:#ffffff;font-size:15px;">Helper object mode</strong>
+        <span style="display:block;color:#aebdcc;font-size:13px;">Hook each curve point to an Empty object.</span>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:12px 14px;">
+        <strong style="display:block;color:#ffffff;font-size:15px;">Optional physics</strong>
+        <span style="display:block;color:#aebdcc;font-size:13px;">Add cloth-style motion and collision support.</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:28px;">
+    <img src="imgs/example_tentakel.gif" alt="Armacurve example rigging a tentacle-like curve in Blender" style="width:100%;height:auto;display:block;border-radius:8px;border:1px solid #2a3948;background:#05080c;">
+    <p style="margin:12px 0 0;color:#94a6b8;font-size:13px;text-align:center;">Build curve-based rigs for tentacles, cables, vines, tails, stylized props, and other spline-driven shapes.</p>
+  </div>
+
+  <div style="padding:0 28px 28px;">
+    <h2 style="margin:0 0 14px;color:#ffffff;font-size:24px;line-height:1.25;font-weight:750;letter-spacing:0;">Why Armacurve?</h2>
+    <p style="margin:0;color:#c8d3df;font-size:16px;">Curve objects are fast for blocking shapes, but turning them into practical rig controls can become repetitive. Armacurve handles the setup work: it reads the curve, generates the rig structure, links the result back to the original workflow, and gives you options for pinning, display, B-Bone preview, and physics setup when the project needs motion.</p>
+  </div>
+
+  <div style="padding:0 28px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+    <div style="background:#111821;border:1px solid #263746;border-radius:8px;padding:18px;">
+      <h3 style="margin:0 0 8px;color:#ffffff;font-size:18px;line-height:1.3;letter-spacing:0;">One-click curve to bones</h3>
+      <p style="margin:0 0 14px;color:#b8c6d4;font-size:14px;">Select a Bezier curve and generate an armature from it. Adjust bone division, B-Bone subdivisions, display type, and visual size directly in the operator options.</p>
+      <img src="imgs/curve_to_bone_operator.gif" alt="Convert curve to bones operator in Armacurve" style="width:100%;height:auto;display:block;border-radius:8px;border:1px solid #2a3948;background:#05080c;">
+    </div>
+    <div style="background:#111821;border:1px solid #263746;border-radius:8px;padding:18px;">
+      <h3 style="margin:0 0 8px;color:#ffffff;font-size:18px;line-height:1.3;letter-spacing:0;">Realtime rig preview</h3>
+      <p style="margin:0 0 14px;color:#b8c6d4;font-size:14px;">Preview and tune the rig result without losing momentum. B-Bone display options help you see how the generated armature follows the curve depth and shape.</p>
+      <img src="imgs/realtime_preview.gif" alt="Realtime preview of an Armacurve generated rig" style="width:100%;height:auto;display:block;border-radius:8px;border:1px solid #2a3948;background:#05080c;">
+    </div>
+  </div>
+
+  <div style="padding:0 28px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+    <div style="background:#111821;border:1px solid #263746;border-radius:8px;padding:18px;">
+      <h3 style="margin:0 0 8px;color:#ffffff;font-size:18px;line-height:1.3;letter-spacing:0;">Rig only selected curve points</h3>
+      <p style="margin:0 0 14px;color:#b8c6d4;font-size:14px;">When working in Curve Edit Mode, use the selected-only operator to process a connected section of a single spline. This is useful when you only need one portion of a curve converted into a mesh rig.</p>
+      <img src="imgs/selected_only.gif" alt="Selected-only curve rigging workflow in Armacurve" style="width:100%;height:auto;display:block;border-radius:8px;border:1px solid #2a3948;background:#05080c;">
+    </div>
+    <div style="background:#111821;border:1px solid #263746;border-radius:8px;padding:18px;">
+      <h3 style="margin:0 0 8px;color:#ffffff;font-size:18px;line-height:1.3;letter-spacing:0;">Head and tail pin offset controls</h3>
+      <p style="margin:0 0 14px;color:#b8c6d4;font-size:14px;">Pin the head or tail and adjust local XYZ offsets to reduce stretching. Weight threshold controls help refine how the generated mesh responds to the rig.</p>
+      <img src="imgs/pin_offset_options.gif" alt="Head and tail pin offset options in Armacurve" style="width:100%;height:auto;display:block;border-radius:8px;border:1px solid #2a3948;background:#05080c;">
+    </div>
+  </div>
+
+  <div style="padding:0 28px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+    <div style="background:#111821;border:1px solid #263746;border-radius:8px;padding:18px;">
+      <h3 style="margin:0 0 8px;color:#ffffff;font-size:18px;line-height:1.3;letter-spacing:0;">Optional collision-aware physics</h3>
+      <p style="margin:0 0 14px;color:#b8c6d4;font-size:14px;">Armacurve can add cloth-based physics to generated setups and enable collision influence when your target objects have Collision modifiers. This is best for simple curve rigs where lightweight motion is enough.</p>
+      <img src="imgs/collision_preview.gif" alt="Collision and cloth physics preview in Armacurve" style="width:100%;height:auto;display:block;border-radius:8px;border:1px solid #2a3948;background:#05080c;">
+    </div>
+    <div style="background:#111821;border:1px solid #263746;border-radius:8px;padding:18px;">
+      <h3 style="margin:0 0 8px;color:#ffffff;font-size:18px;line-height:1.3;letter-spacing:0;">Empty helpers on curve points</h3>
+      <p style="margin:0 0 14px;color:#b8c6d4;font-size:14px;">Use Add Object Helper to place Empty objects on curve points and hook the curve to those controls. It is a direct way to animate or position a curve through viewport-friendly handles.</p>
+      <img src="imgs/helperobject_on_point.gif" alt="Empty helper objects added on curve points with Armacurve" style="width:100%;height:auto;display:block;border-radius:8px;border:1px solid #2a3948;background:#05080c;">
+    </div>
+  </div>
+
+  <div style="padding:0 28px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+    <div style="background:#111821;border:1px solid #263746;border-radius:8px;padding:18px;">
+      <h3 style="margin:0 0 8px;color:#ffffff;font-size:18px;line-height:1.3;letter-spacing:0;">Tweaker panel for generated rigs</h3>
+      <p style="margin:0 0 14px;color:#b8c6d4;font-size:14px;">After generating an Armacurve setup, select the generated armature and use the Tweaker panel to adjust the armature, add or remove parent controls, and add or remove physics helpers.</p>
+      <img src="imgs/tweaker_panel.gif" alt="Armacurve Tweaker panel in the Blender sidebar" style="width:100%;height:auto;display:block;border-radius:8px;border:1px solid #2a3948;background:#05080c;">
+    </div>
+    <div style="background:#111821;border:1px solid #263746;border-radius:8px;padding:18px;">
+      <h3 style="margin:0 0 8px;color:#ffffff;font-size:18px;line-height:1.3;letter-spacing:0;">Designed for quick access</h3>
+      <p style="margin:0 0 12px;color:#b8c6d4;font-size:14px;">Find Armacurve in the 3D View sidebar under <strong style="color:#ffffff;">Tool &gt; Armacurve</strong>, or use the default pie menu shortcut <strong style="color:#ffffff;">Shift + Alt + C</strong>.</p>
+      <ul style="margin:0;padding-left:20px;color:#b8c6d4;font-size:14px;">
+        <li>Convert To Bone</li>
+        <li>C. to Mesh and Rig</li>
+        <li>C. to Mesh and Rig (Selected)</li>
+        <li>Add Object Helper</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin:0 28px 28px;background:#0f171f;border:1px solid #263746;border-radius:8px;padding:20px;">
+    <h2 style="margin:0 0 12px;color:#ffffff;font-size:22px;line-height:1.25;letter-spacing:0;">What is included</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
+      <div style="background:#121d27;border:1px solid #2a3948;border-radius:8px;padding:14px;color:#c8d3df;font-size:14px;">Curve-to-armature generation for Bezier curve objects.</div>
+      <div style="background:#121d27;border:1px solid #2a3948;border-radius:8px;padding:14px;color:#c8d3df;font-size:14px;">Curve-to-mesh rig workflow with selected-only support.</div>
+      <div style="background:#121d27;border:1px solid #2a3948;border-radius:8px;padding:14px;color:#c8d3df;font-size:14px;">Helper Empty creation and hooks for curve points.</div>
+      <div style="background:#121d27;border:1px solid #2a3948;border-radius:8px;padding:14px;color:#c8d3df;font-size:14px;">Tweaker tools for adjusting generated Armacurve setups.</div>
+      <div style="background:#121d27;border:1px solid #2a3948;border-radius:8px;padding:14px;color:#c8d3df;font-size:14px;">Optional cloth physics, pinning, collision influence, and offset controls.</div>
+      <div style="background:#121d27;border:1px solid #2a3948;border-radius:8px;padding:14px;color:#c8d3df;font-size:14px;">Free future updates included with your purchase.</div>
+    </div>
+  </div>
+
+  <div style="margin:0 28px 28px;background:#16120d;border:1px solid #5a3b1f;border-radius:8px;padding:20px;">
+    <h2 style="margin:0 0 10px;color:#ffd08a;font-size:22px;line-height:1.25;letter-spacing:0;">Compatibility and limitations</h2>
+    <ul style="margin:0;padding-left:20px;color:#e5cda8;font-size:14px;">
+      <li>Supports Blender 4.2 through 4.5. Blender 5.0 support is not included yet.</li>
+      <li>Works on a single non-cyclic Bezier spline. Multiple splines in one curve object should be separated first.</li>
+      <li>Batch operation on multiple curve objects at once is not currently supported.</li>
+      <li>Selected-only mode should be used on connected points from one spline.</li>
+      <li>The physics feature is a bonus workflow for simple curves. Complex curves or too many generated bones can produce unstable Blender cloth behavior.</li>
+    </ul>
+    <p style="margin:12px 0 0;color:#e5cda8;font-size:14px;"><strong>Please do not purchase Armacurve only for the physics feature.</strong> The core purpose of the add-on is curve-to-bone, curve-to-mesh rigging, helper creation, and rig adjustment.</p>
+  </div>
+
+  <div style="padding:0 28px 30px;">
+    <h2 style="margin:0 0 12px;color:#ffffff;font-size:22px;line-height:1.25;letter-spacing:0;">Questions?</h2>
+    <p style="margin:0;color:#c8d3df;font-size:15px;">If you have a question before purchasing, feel free to contact me. I am happy to clarify workflow details, limitations, and whether Armacurve fits your specific rigging use case.</p>
+  </div>
+</div>
